@@ -577,92 +577,64 @@ function tampilkanKategori(){
 // VIDEO
 // =====================================
 
-
 function tampilkanVideo(){
 
+const container =
+document.getElementById("video-news");
 
-    const container =
 
-    document.getElementById(
-
-        "video-news"
-
-    );
+if(!container) return;
 
 
 
-    if(!container) return;
+container.innerHTML = `
 
 
+<div class="video-card"
+data-video="KseaacSuze0">
 
 
-
-    container.innerHTML = `
-
+<img src="https://img.youtube.com/vi/KseaacSuze0/maxresdefault.jpg">
 
 
-    <div class="video-card">
+<div class="play-button">
+▶
+</div>
 
 
-        <img src="assets/images/video1.jpg">
+<h3>
+Trailer Film Darma
+</h3>
 
 
-
-        <div class="play-button">
-
-            ▶
-
-        </div>
-
-
-
-        <h3>
-
-            Video Kresekcorp
-
-        </h3>
-
-
-
-    </div>
+</div>
 
 
 
 
-
-    <div class="video-card">
-
-
-        <img src="assets/images/video2.jpg">
+<div class="video-card"
+data-video="QEmUCQKqtaA">
 
 
-
-        <div class="play-button">
-
-            ▶
-
-        </div>
+<img src="https://img.youtube.com/vi/QEmUCQKqtaA/maxresdefault.jpg">
 
 
-
-        <h3>
-
-            Behind The Scene
-
-        </h3>
+<div class="play-button">
+▶
+</div>
 
 
-
-    </div>
-
-
-
-    `;
+<h3>
+Trailer Nggatel The Movie
+</h3>
 
 
+</div>
+
+
+`;
 
 }
-
 
 
 
@@ -699,16 +671,16 @@ function tampilkanGaleri(){
 
 
 
-    <img src="assets/images/gallery1.jpg">
+<img class="gallery-photo" src="assets/images/galeri1.jpg">
 
 
-    <img src="assets/images/gallery2.jpg">
+<img class="gallery-photo" src="assets/images/galeri2.jpg">
 
 
-    <img src="assets/images/gallery3.jpg">
+<img class="gallery-photo" src="assets/images/galeri3.jpg">
 
 
-    <img src="assets/images/gallery4.jpg">
+<img class="gallery-photo" src="assets/images/galeri4.jpg">
 
 
 
@@ -2062,15 +2034,6 @@ videoBox.innerHTML += `
 
 
 
-const videoPopup =
-document.getElementById("video-popup");
-
-
-const videoFrame =
-document.getElementById("video-frame");
-
-
-
 document.querySelectorAll(".video-card")
 .forEach(card=>{
 
@@ -2101,3 +2064,116 @@ videoPopup.style.display="none";
 videoFrame.src="";
 
 };
+// LIGHTBOX GALERI FOTO
+
+
+const lightbox =
+document.getElementById("lightbox");
+
+
+const lightboxImg =
+document.getElementById("lightbox-img");
+
+
+const closeLightbox =
+document.querySelector(".lightbox-close");
+
+
+
+document.addEventListener("click", function(e){
+
+
+    if(e.target.classList.contains("gallery-photo")){
+
+
+        lightbox.style.display="flex";
+
+
+        lightboxImg.src =
+        e.target.src;
+
+
+    }
+
+
+});
+
+
+
+closeLightbox.onclick=function(){
+
+
+    lightbox.style.display="none";
+
+
+};
+
+
+// VIDEO POPUP FIX
+
+
+document.addEventListener("click", function(e){
+
+
+    const card = e.target.closest(".video-card");
+
+
+    if(card){
+
+
+        const videoId = card.dataset.video;
+
+
+        if(videoId){
+
+
+            const popup =
+            document.getElementById("video-popup");
+
+
+            const frame =
+            document.getElementById("video-frame");
+
+
+
+            popup.style.display = "flex";
+
+
+            frame.src =
+            "https://www.youtube.com/embed/"
+            + videoId
+            + "?autoplay=1";
+
+
+        }
+
+
+    }
+
+
+});
+
+
+
+const closeVideoButton =
+document.querySelector(".close-video");
+
+
+if(closeVideoButton){
+
+
+closeVideoButton.onclick=function(){
+
+
+    document.getElementById("video-popup")
+    .style.display="none";
+
+
+    document.getElementById("video-frame")
+    .src="";
+
+
+};
+
+
+}

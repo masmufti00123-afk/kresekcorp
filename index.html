@@ -148,6 +148,7 @@ Berita Terpopuler
 
 <!-- BERITA TERBARU -->
 
+<div class="content-layout">
 
 <section class="section">
 
@@ -172,7 +173,7 @@ id="latest-news">
 
 </section>
 
-
+<div class="sidebar">
 
 
 
@@ -326,21 +327,20 @@ id="gallery-news">
 
 </section>
 
+</div>
 
-
-
-
+</div>
 
 
 <!-- POPUP FOTO -->
 
 <div class="gallery-popup" id="gallery-popup">
 
-<span class="close-gallery">
-×
-</span>
+    <span class="close-gallery">
+        ×
+    </span>
 
-<img id="gallery-image">
+    <img id="gallery-image">
 
 </div>
 
@@ -350,17 +350,27 @@ id="gallery-news">
 
 <div class="video-popup" id="video-popup">
 
-<span class="close-video">
-×
-</span>
+    <span class="close-video">
+        ×
+    </span>
 
-<iframe 
-id="video-frame"
-allowfullscreen>
-</iframe>
+    <iframe 
+    id="video-frame"
+    allowfullscreen>
+    </iframe>
 
 </div>
+<!-- LIGHTBOX FOTO -->
 
+<div class="lightbox" id="lightbox">
+
+    <span class="lightbox-close">
+        ×
+    </span>
+
+    <img id="lightbox-img">
+
+</div>
 <script src="script.js"></script>
 
 

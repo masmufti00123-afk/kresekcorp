@@ -1189,7 +1189,7 @@ to{
 }
 
 
-}
+
 
 
 
@@ -1390,5 +1390,92 @@ to{
         height:40%;
 
     }
+
+}/* LIGHTBOX FOTO */
+
+.lightbox{
+
+    display:none;
+
+    position:fixed;
+
+    z-index:9999;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,0.85);
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    border-radius:10px;
+
+}
+
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:25px;
+
+    right:35px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}.content-layout{
+
+    display:grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+
+
+.sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+@media(max-width:768px){
+
+    .content-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
 
 }
