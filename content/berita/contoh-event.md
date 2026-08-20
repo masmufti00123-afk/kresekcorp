@@ -1,10 +1,10 @@
 ---
-title: "Kresekcorp Event Kreatif 2026"
-kategori: "Event"
-author: "Redaksi Kresekcorp"
-date: "2026-08-18"
-thumbnail: "/assets/images/uploads/event.jpg"
-excerpt: "Event kreatif terbaru dari Kresekcorp."
+title: Kresekcorp Event Kreatif 2026
+kategori: Event
+author: Redaksi Kresekcorp
+date: 2026-08-20T20:10:00.000+07:00
+thumbnail: /assets/images/uploads/event.jpg
+excerpt: Event kreatif terbaru dari Kresekcorp.
 ---
 
 
