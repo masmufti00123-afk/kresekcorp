@@ -47,6 +47,11 @@ collections:
         name: "date"
         widget: "datetime"
 
+      - label: "Jam Publikasi"
+        name: "time"
+        widget: "string"
+        default: "19:30"
+
 
       - label: "Gambar Utama"
         name: "thumbnail"
