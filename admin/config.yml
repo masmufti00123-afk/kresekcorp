@@ -20,73 +20,44 @@ collections:
 
     slug: "{{slug}}"
 
-    format: "frontmatter"
-
     fields:
 
-
       - label: "Judul Berita"
-
         name: "title"
-
         widget: "string"
-
 
 
       - label: "Kategori"
-
         name: "kategori"
-
         widget: "select"
-
         options:
-
           - Event
-
           - Hiburan
-
           - Informasi
-
           - Produksi
 
 
-
       - label: "Penulis"
-
         name: "author"
-
         widget: "string"
-
         default: "Redaksi Kresekcorp"
 
 
-
       - label: "Tanggal Publikasi"
-
         name: "date"
-
         widget: "datetime"
 
 
-
       - label: "Gambar Utama"
-
         name: "thumbnail"
-
         widget: "image"
 
 
-
-      - label: "Ringkasan Berita"
-
+      - label: "Ringkasan"
         name: "excerpt"
-
         widget: "text"
 
 
-
       - label: "Isi Berita"
-
         name: "body"
-
         widget: "markdown"
