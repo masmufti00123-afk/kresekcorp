@@ -1103,9 +1103,24 @@ to{
 
     margin-top:20px;
 
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
 
     justify-content:center;
+
+    gap:15px;
+
+    width:100%;
+
+}
+
+
+.header nav a{
+
+    font-size:13px;
+
+    white-space:nowrap;
+
+}
 
 }
 
