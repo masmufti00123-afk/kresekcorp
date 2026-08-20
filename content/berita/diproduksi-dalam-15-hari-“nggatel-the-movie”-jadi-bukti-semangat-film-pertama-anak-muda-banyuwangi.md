@@ -3,7 +3,7 @@ title: Diproduksi dalam 15 Hari, “Nggatel The Movie” Jadi Bukti Semangat Fil
   Pertama Anak Muda Banyuwangi
 kategori: Produksi
 author: Vanza Arjuna
-date: 2023-04-07T15:59:00.000+07:00
+date: 2026-08-20T19:47:00.000+07:00
 thumbnail: assets/images/uploads/berita.jpg
 excerpt: Film Nggatel The Movie menjadi langkah awal Kresek Entertainment dalam
   dunia perfilman lokal Banyuwangi. Diproduksi secara mandiri dalam waktu 15
