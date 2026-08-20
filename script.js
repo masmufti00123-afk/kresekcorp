@@ -1940,3 +1940,164 @@ activeMenu();
 
 
 loadBerita();
+
+// GALERI FOTO
+
+const galleryData = [
+
+"galeri1.jpg",
+"galeri2.jpg",
+"galeri3.jpg",
+"galeri4.jpg"
+
+];
+
+
+const galleryBox = document.getElementById("gallery-news");
+
+
+galleryData.forEach(photo=>{
+
+
+galleryBox.innerHTML += `
+
+<img 
+src="assets/images/${photo}"
+class="gallery-photo">
+
+`;
+
+
+});
+
+
+
+const galleryPopup =
+document.getElementById("gallery-popup");
+
+
+const galleryImage =
+document.getElementById("gallery-image");
+
+
+
+document.querySelectorAll(".gallery-photo")
+.forEach(img=>{
+
+
+img.onclick=function(){
+
+galleryPopup.style.display="flex";
+
+galleryImage.src=this.src;
+
+}
+
+
+});
+
+
+
+document.querySelector(".close-gallery")
+.onclick=function(){
+
+galleryPopup.style.display="none";
+
+};
+
+
+
+
+// VIDEO POPUP
+
+
+const videoData=[
+
+
+{
+
+title:"Trailer Film Darma",
+
+id:"KseaacSuze0"
+
+},
+
+
+{
+
+title:"Trailer Nggatel The Movie",
+
+id:"QEmUCQKqtaA"
+
+}
+
+
+];
+
+
+
+const videoBox=document.getElementById("video-news");
+
+
+
+videoData.forEach(video=>{
+
+
+videoBox.innerHTML += `
+
+<div class="video-card" data-video="${video.id}">
+
+
+<img src="https://img.youtube.com/vi/${video.id}/maxresdefault.jpg">
+
+
+<h3>${video.title}</h3>
+
+
+</div>
+
+`;
+
+});
+
+
+
+const videoPopup =
+document.getElementById("video-popup");
+
+
+const videoFrame =
+document.getElementById("video-frame");
+
+
+
+document.querySelectorAll(".video-card")
+.forEach(card=>{
+
+
+card.onclick=function(){
+
+
+videoPopup.style.display="flex";
+
+
+videoFrame.src=
+"https://www.youtube.com/embed/"
++this.dataset.video;
+
+
+}
+
+
+});
+
+
+
+document.querySelector(".close-video")
+.onclick=function(){
+
+videoPopup.style.display="none";
+
+videoFrame.src="";
+
+};
