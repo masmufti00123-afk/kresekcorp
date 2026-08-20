@@ -3,14 +3,11 @@ const path = require("path");
 const matter = require("gray-matter");
 
 
-
 const folderBerita = "./content/berita";
 
 const outputFolder = "./data";
 
 const outputFile = "./data/berita.json";
-
-
 
 
 
@@ -24,35 +21,33 @@ if (!fs.existsSync(outputFolder)) {
 
 
 
-
-
 let daftarBerita = [];
 
 
 
-
-
-// cek folder berita
+// baca folder berita
 
 if (fs.existsSync(folderBerita)) {
 
 
-
     const files = fs
-    .readdirSync(folderBerita)
-    .filter(
-        file => file.endsWith(".md")
-    );
-
+        .readdirSync(folderBerita)
+        .filter(file => file.endsWith(".md"));
 
 
 
     files.forEach(file => {
 
 
+        const lokasiFile = path.join(
+            folderBerita,
+            file
+        );
+
+
 
         const isiFile = fs.readFileSync(
-            path.join(folderBerita,file),
+            lokasiFile,
             "utf8"
         );
 
@@ -66,47 +61,69 @@ if (fs.existsSync(folderBerita)) {
 
 
             slug:
+
+            data.data.slug ||
+
             file.replace(".md",""),
 
 
 
             title:
+
             data.data.title || "",
 
 
 
             kategori:
+
             data.data.kategori || "",
 
 
 
             author:
-            data.data.author || "",
+
+            data.data.author ||
+
+            "Redaksi Kresekcorp",
 
 
 
             date:
+
             data.data.date || "",
 
 
 
+            time:
+
+            data.data.time || "",
+
+
+
             thumbnail:
+
             data.data.thumbnail || "",
 
 
 
             excerpt:
+
             data.data.excerpt || "",
 
 
 
-            body:
-            data.content
+            tags:
 
+            data.data.tags || [],
+
+
+
+            body:
+
+            data.content.trim()
 
 
         });
-
 
 
     });
@@ -117,16 +134,17 @@ if (fs.existsSync(folderBerita)) {
 
 
 
-
-
-// urutkan berdasarkan tanggal terbaru
+// urutkan berita terbaru
 
 daftarBerita.sort(
-    (a,b)=>
-    new Date(b.date) -
-    new Date(a.date)
-);
 
+    (a,b)=>
+
+    new Date(b.date) -
+
+    new Date(a.date)
+
+);
 
 
 
@@ -137,17 +155,21 @@ fs.writeFileSync(
     outputFile,
 
     JSON.stringify(
+
         daftarBerita,
+
         null,
+
         2
+
     )
 
 );
 
 
 
-
-
 console.log(
+
     "Data berita berhasil dibuat"
+
 );
