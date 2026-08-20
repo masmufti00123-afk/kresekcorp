@@ -1,0 +1,17 @@
+[
+    {
+        "slug": "contoh-event",
+        "title": "Kresekcorp Event Kreatif 2026",
+        "kategori": "Event",
+        "author": "Redaksi Kresekcorp",
+        "date": "2026-08-18",
+        "time": "19:30",
+        "thumbnail": "/assets/images/uploads/event.jpg",
+        "excerpt": "Event kreatif terbaru dari Kresekcorp.",
+        "tags": [
+            "event",
+            "kresekcorp"
+        ],
+        "body": "<p>Isi berita...</p>"
+    }
+]

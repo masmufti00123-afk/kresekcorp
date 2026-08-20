@@ -1,0 +1,90 @@
+backend:
+  name: git-gateway
+  branch: main
+
+
+media_folder: "assets/images/uploads"
+
+public_folder: "/assets/images/uploads"
+
+
+collections:
+
+  - name: "berita"
+
+    label: "Berita"
+
+    folder: "data/posts"
+
+    create: true
+
+    slug: "{{slug}}"
+
+    fields:
+
+
+      - label: "Judul Berita"
+
+        name: "title"
+
+        widget: "string"
+
+
+
+      - label: "Kategori"
+
+        name: "kategori"
+
+        widget: "select"
+
+        options:
+
+          - Event
+
+          - Hiburan
+
+          - Informasi
+
+          - Produksi
+
+
+
+      - label: "Penulis"
+
+        name: "author"
+
+        widget: "string"
+
+        default: "Redaksi Kresekcorp"
+
+
+
+      - label: "Tanggal"
+
+        name: "date"
+
+        widget: "datetime"
+
+
+
+      - label: "Gambar Utama"
+
+        name: "thumbnail"
+
+        widget: "image"
+
+
+
+      - label: "Ringkasan"
+
+        name: "excerpt"
+
+        widget: "text"
+
+
+
+      - label: "Isi Berita"
+
+        name: "body"
+
+        widget: "markdown"
