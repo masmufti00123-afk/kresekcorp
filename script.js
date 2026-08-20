@@ -1117,14 +1117,13 @@ function tampilkanArtikel(){
 
 
 
-    <div class="article-content">
+<div class="article-content">
 
 
-        ${berita.body}
+    ${marked.parse(berita.body)}
 
 
-
-    </div>
+</div>
 
 
 
